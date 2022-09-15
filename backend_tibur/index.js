@@ -9,9 +9,15 @@ app.use(express.urlencoded({extended:true}))
 
 //creamos nuestra primera ruta
 
+const db = require('./model');
+
+db.sequelize.sync({force:true}).then(()=> console.log("Drop database and resync."))
+
 app.get('/', (req, res)=>{
     res.json({msg: 'todo va bien'}).status(204);
 })
+
+require("./routes/cosa.routes")(app);
 
 // const PORT = proccess.env.PORT || 8080 ;
 
