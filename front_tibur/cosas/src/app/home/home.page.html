@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div>
+    <h1 class="tipo">
+      Tipo : {{tipo}}
+    </h1>
+    <p>
+      Calidad : {{calidad}}
+    </p>
+  </div>
+
+  <ion-button expand="block" (click)="gotoMyCosas()">
+    👉vamos a ver mis cosas👉
+  </ion-button>
+</ion-content>

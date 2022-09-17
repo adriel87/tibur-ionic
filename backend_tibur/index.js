@@ -19,7 +19,7 @@ app.get('/', (req, res)=>{
 
 require("./routes/cosa.routes")(app);
 
-// const PORT = proccess.env.PORT || 8080 ;
+const PORT = process.env.PORT || 8080 ;
 
 // console.log(proccess.env);
 app.listen(8080, ()=>{
