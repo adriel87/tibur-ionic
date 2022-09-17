@@ -1,7 +1,0 @@
-{
-  "name": "basics_tibur",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}

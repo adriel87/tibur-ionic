@@ -1,10 +1,10 @@
 const dbConfig = require('../config/db-config.js');
 const mysqlConfig = require('../config/mysql-conf.js')
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('db_cosas', 'root', 'secret', {
+const sequelize = new Sequelize('db_cosas', 'root', '1234', {
     host: "localhost",
     dialect:"mysql",
-    port: 3306,
+    port: 13306,
     pool:{
         max:5,
         min:0,
