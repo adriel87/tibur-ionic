@@ -36,21 +36,62 @@ exports.findAll = (req, res) => {
 }
 // read one
 exports.findOne = (req, res) => {
+
+    const { id } = req.params;
+
+    Cosa.findAll({
+        where:{
+            id,
+        }
+    })
+    .then( data => res.status(200).send(data))
+    .catch( err => res.status(500))
+
     res.status(404).send({
         msg:'Working on it'
     })
 }
 // update one
 exports.update = (req, res) => {
-    res.status(404).send({
-        msg:'Working on it'
-    })
+
+    const { id } = req.params;
+    const updateParams = req.body
+    
+
+   Cosa.update({ ...updateParams },{
+    where:{
+        id
+    }
+   })
+   .then(data => res.status(200).send(data))
+   .catch( err => res.status(500)) 
+
+    
+
 }
 // delete one 
-exports.delete = (req, res) => {
-    res.status(404).send({
-        msg:'Working on it'
+exports.delete = async (req, res) => {
+    const { id } = req.params;
+    
+
+    const resp = await  Cosa.destroy({
+        where:{
+            id
+        }
     })
+    .then(data => {
+        if(data > 0) {
+            res.status(200).send({msg:`se han eliminado ${data} registros`})
+        }else{
+            res.status(200).send({msg:`unreachable id`})
+        }
+    })
+    .catch( err => res.status(500)) 
+
+    // const data = await resp.json()
+
+    
+
 }
 
 
