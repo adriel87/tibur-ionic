@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cosa } from 'src/interfaces';
+import { CosaService } from '../services/cosa.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +10,24 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  tipo = 'asdfsadf';
-  calidad = 'ultra';
+  favCosas : Cosa [] = []
+  
+  constructor(private router: Router, private dbCosas:CosaService) {}
 
-  constructor(private router: Router) {}
+  ngOnInit(){
+    this.getMyFavCosas()
+  };
+
+  getMyFavCosas(){
+    this.dbCosas.getCosasFav().subscribe(response => {
+      this.favCosas = response as Cosa[]
+    })
+  }
+
+
 
   gotoMyCosas(){
     this.router.navigateByUrl('/my-cosas');
-  }
+  };
 
 }
