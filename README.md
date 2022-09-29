@@ -86,29 +86,24 @@ ahora bien hay peculiaridades mira las del :
 2. lanza los endpoint, todos estan preparados para simplemente lanzarlos,
 
 
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+### front
+- IONIC
+- angular
 
+### back
+- express
+- sequelize
+- cors
+- dotenv
 
 ## Autor ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-
-
-
+Adriel Arocha Oronoz
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con 💜 por [Adriel87](https://github.com/adriel87) 
 
 
