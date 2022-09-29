@@ -1,18 +1,21 @@
 const express = require('express')
 const cors = require('cors')
+const { PORT } = require('./config/enviroment');
+
+const isForceNeed = process.argv[2]?.includes('force')
 
 const app = express();
 // aplicamos diferentes middlewares
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-app.use(cors())
 
-//creamos nuestra primera ruta
+// uso la version simple del cors que por defecto permite todo
+app.use(cors())
 
 const db = require('./model');
 
-db.sequelize.sync({force:true}).then(()=> console.log("Drop database and resync."))
+db.sequelize.sync({force: isForceNeed }).then(()=> console.log("Drop database and resync."))
 
 app.get('/', (req, res)=>{
     res.json({msg: 'todo va bien'}).status(204);
@@ -20,9 +23,6 @@ app.get('/', (req, res)=>{
 
 require("./routes/cosa.routes")(app);
 
-const PORT = process.env.PORT || 8080 ;
-
-// console.log(proccess.env);
-app.listen(8080, ()=>{
-    console.log(`servido ready en ${8080}`);
+app.listen(PORT, ()=>{
+    console.log(`servido ready en ${PORT}`);
 })

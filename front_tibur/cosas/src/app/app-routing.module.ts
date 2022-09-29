@@ -15,6 +15,18 @@ const routes: Routes = [
     path: 'my-cosas',
     loadChildren: () => import('./my-cosas/my-cosas.module').then( m => m.MyCosasPageModule)
   },
+  {
+    path: 'create-your-cosa',
+    loadChildren: () => import('./create-your-cosa/create-your-cosa.module').then( m => m.CreateYourCosaPageModule)
+  },
+  {
+    path: 'update/:id',
+    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
+  },
+  {
+    path: 'delete/:id',
+    loadChildren: () => import('./delete/delete.module').then( m => m.DeletePageModule)
+  },
 ];
 
 @NgModule({

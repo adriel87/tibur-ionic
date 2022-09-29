@@ -1,6 +1,9 @@
+const {DB_HOST, DB_DIALECT, DB_PORT} = require("./enviroment")
+
 module.exports={
-    host: "localhost",
-    dialect:"mysql",
+    host: DB_HOST,
+    dialect: DB_DIALECT,
+    port: DB_PORT,
     pool:{
         max:5,
         min:0,

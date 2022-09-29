@@ -1,0 +1,16 @@
+<ion-card style="width: 85vw;">
+  <ion-card-header>
+    <ion-card-subtitle>{{cosa.tipo}}</ion-card-subtitle>
+    <ion-card-title>{{cosa.calidad}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="center-flex">
+      <ion-button class="button" fill="clear" shape="round" (click)="onUpdate()">
+        <ion-icon class="icon update" name="create"></ion-icon>
+      </ion-button>
+      <ion-button class="button" fill="clear" shape="round" (click)="onDelete()">
+        <ion-icon class="icon delete" name="trash-bin"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-card-content>
+</ion-card>

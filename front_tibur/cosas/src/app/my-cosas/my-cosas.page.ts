@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CosaService } from '../services/cosa.service';
 
 interface Cosa {
@@ -28,17 +29,39 @@ const initCosa : Cosa[]= [
 export class MyCosasPage implements OnInit {
 
   cosas : any;
+  saludo: string
 
-  constructor(private dbCosas : CosaService) { }
+  constructor(
+    private route : Router,
+    private dbCosas : CosaService
+  ) { 
+    this.saludo = 'hola maricarme'
+  }
 
   ngOnInit() {
     this.getCosas()
   }
 
+  ionViewDidEnter() {
+    this.dbCosas.getCosas().subscribe(response =>{
+      this.cosas = response;
+    })
+  }
   getCosas(){
     this.dbCosas.getCosas().subscribe(response =>{
       this.cosas = response;
     })
+  }
+
+
+  deleteCosa(id){
+    this.dbCosas.deleteCosa(id).subscribe(response =>{
+      this.cosas = response;
+    })
+  }
+
+  goBack(){
+    this.route.navigate(['/'])
   }
 
 }

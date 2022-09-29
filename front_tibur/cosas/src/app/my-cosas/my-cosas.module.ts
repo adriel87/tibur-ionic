@@ -7,7 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { MyCosasPageRoutingModule } from './my-cosas-routing.module';
 
 import { MyCosasPage } from './my-cosas.page';
-
+import { MyCosasItemComponent } from '../my-cosas-item/my-cosas-item.component';
+import { CreateNewCosaComponent } from '../create-new-cosa/create-new-cosa.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,6 @@ import { MyCosasPage } from './my-cosas.page';
     IonicModule,
     MyCosasPageRoutingModule
   ],
-  declarations: [MyCosasPage]
+  declarations: [MyCosasPage, MyCosasItemComponent, CreateNewCosaComponent]
 })
 export class MyCosasPageModule {}

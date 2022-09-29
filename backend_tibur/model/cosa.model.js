@@ -5,6 +5,10 @@ module.exports=(sequelize, Sequelize) =>{
         },
         calidad:{
             type: Sequelize.STRING,
+        },
+        fav:{
+            type: Sequelize.BOOLEAN,
+            defaultValue: false,
         }
     })
 

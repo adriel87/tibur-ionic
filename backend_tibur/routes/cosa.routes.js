@@ -1,11 +1,8 @@
-module.exports = app =>{
+module.exports = app => {
     const express = require('express')
     const router = express.Router()
     
     const cosa = require('../controllers/cosa.controller')
-
-    
-    
 
     router.post('/', cosa.create);
 
@@ -15,7 +12,6 @@ module.exports = app =>{
     router.delete('/:id', cosa.delete);
 
     app.use('/api/cosa', router)
-
 
 }
 

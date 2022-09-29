@@ -6,15 +6,9 @@
 
 <ion-content>
   <ion-list>
-      <ion-item *ngFor="let cosa of cosas">
-        <ion-label>
-          <h1>
-            {{cosa.tipo}}
-          </h1>
-          <p>
-            {{cosa.calidad}}
-          </p>
-        </ion-label>
+      <ion-item *ngFor="let cosa of cosas" lines="none">
+        <app-my-cosas-item [cosa]="cosa"></app-my-cosas-item>
       </ion-item>
   </ion-list>
+  <app-create-new-cosa></app-create-new-cosa>
 </ion-content>

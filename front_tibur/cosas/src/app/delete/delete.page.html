@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="container">
+    <h1>Vas a destruir</h1>
+    <h2>👇esta cosa👇</h2>
+
+    <div>
+      <p>{{nose?.tipo}}</p>
+      <p>{{nose?.calidad}}</p>
+    </div>
+  </div>
+  
+  <ion-button 
+    expand="full" 
+    class="ion-margin" 
+    color="danger" 
+    id="open-modal">
+    <span class="icon">☠️</span> si tengo otras cosas <span class="icon">☠️</span>
+  </ion-button>
+
+  <ion-button expand="full" class="ion-margin" (click)="goBack()">
+   <span class="icon">🥺</span> no es mi tesoro <span class="icon">🥺</span>
+  </ion-button>
+
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-content class="ion-align-items-center">
+        <ion-img class="ion-margin" src="https://c.tenor.com/RXMxqsRKEn0AAAAC/this-is-fine.gif"></ion-img>
+        <ion-button 
+          (click)="confirm()"
+          expand="full" 
+          class="button" 
+          color="danger" 
+          id="open-modal">
+          <span class="icon">☠️</span> que siiiii <span class="icon">☠️</span>
+        </ion-button>
+      
+        <ion-button 
+          (click)="cancel()"
+          expand="full" 
+          class="button"
+          >
+         <span class="icon">😇</span> salvemos la cosa <span class="icon">😇</span>
+        </ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

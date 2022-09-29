@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cosa } from 'src/interfaces';
 import { CosaService } from '../services/cosa.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { CosaService } from '../services/cosa.service';
 })
 export class HomePage {
 
-  favCosas : Cosa [] = []
+  cosa : any 
   
   constructor(private router: Router, private dbCosas:CosaService) {}
 
@@ -19,8 +18,10 @@ export class HomePage {
   };
 
   getMyFavCosas(){
-    this.dbCosas.getCosasFav().subscribe(response => {
-      this.favCosas = response as Cosa[]
+    this.dbCosas.getCosa(7).subscribe(response => {
+      this.cosa = response 
+      console.log(response, this.cosa);
+      
     })
   }
 
