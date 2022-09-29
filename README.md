@@ -82,8 +82,16 @@ ahora bien hay peculiaridades mira las del :
 
 ## Pruebas de la api 🧪
 
+te dejo 2 caminos pero recuerda la base de datos de primera esta pelada asi que te recomiendo que primero lances un par de POST o en la coleccion `createCosa`
+
+- primera opcion, pincha aqui cuando tengas el back levantado. Luego podras pinchar sobre `view in collection` y te abrira una pestaña.
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/17204381-45f06cbc-a9a4-454e-ba3a-3f50059bc66c?action=collection%2Ffork&collection-url=entityId%3D17204381-45f06cbc-a9a4-454e-ba3a-3f50059bc66c%26entityType%3Dcollection%26workspaceId%3Da72a82a2-694e-44b1-b16f-f33fab87ebdb#?env%5BCosasEnviroment%5D=W3sia2V5IjoiQkFTSUNfUk9PVCIsInZhbHVlIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2FwaS9jb3NhIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvYXBpL2Nvc2EiLCJzZXNzaW9uSW5kZXgiOjB9XQ==)
+
+- segunda opcion
+
 1. importa la coleccion y variables de postmant que estan en la carpeta postman
-2. lanza los endpoint, todos estan preparados para simplemente lanzarlos,
+2. lanza los endpoint, todos estan preparados para simplemente lanzarlos
+
 
 
 
